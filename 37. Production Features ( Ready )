@@ -1,0 +1,11 @@
+{
+  "features": [
+    "JWT Auth Secure",
+    "Role-based Access Control (Admin/User)",
+    "AI Usage Logging",
+    "Multi Payment Gateway",
+    "Webhook Sync Payment",
+    "Scalable AI Service",
+    "PostgreSQL Optimized Schema"
+  ]
+}
