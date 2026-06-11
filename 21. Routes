@@ -1,0 +1,7 @@
+{
+  "routes": {
+    "auth": "router.post('/admin/login', loginAdmin);\nrouter.post('/admin/register', registerAdmin);",
+    "ai": "router.post('/generate', adminMiddleware, generate);",
+    "payment": "router.post('/create', adminMiddleware, createPayment);"
+  }
+}
