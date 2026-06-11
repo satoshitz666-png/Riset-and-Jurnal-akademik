@@ -1,0 +1,28 @@
+{
+  "prisma": {
+    "schema": "generator client { provider = \"prisma-client-js\" }\n\
+datasource db { provider = \"postgresql\" url = env(\"DATABASE_URL\") }\n\
+model User {\n\
+  id String @id @default(uuid())\n\
+  email String @unique\n\
+  password String?\n\
+  role String @default(\"user\")\n\
+  createdAt DateTime @default(now())\n\
+}\n\
+model Transaction {\n\
+  id String @id @default(uuid())\n\
+  userId String\n\
+  amount Float\n\
+  status String\n\
+  provider String\n\
+  createdAt DateTime @default(now())\n\
+}\n\
+model AIRequest {\n\
+  id String @id @default(uuid())\n\
+  userId String\n\
+  prompt String\n\
+  response String\n\
+  createdAt DateTime @default(now())\n\
+}"
+  }
+}
