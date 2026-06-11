@@ -1,0 +1,8 @@
+{
+  "integration": {
+    "login": "POST /api/auth/admin/login",
+    "ai_generate": "POST /api/ai/generate",
+    "payment": "POST /api/payment/create",
+    "auth_header": "Authorization: Bearer TOKEN"
+  }
+}
