@@ -1,0 +1,11 @@
+{
+  "adminMiddleware": "const jwt = require('jsonwebtoken');\n\
+module.exports = (req, res, next) => {\n\
+  const token = req.headers.authorization?.split(' ')[1];\n\
+  if (!token) return res.sendStatus(401);\n\
+  const decoded = jwt.verify(token, process.env.JWT_SECRET);\n\
+  if (decoded.role !== 'admin') return res.sendStatus(403);\n\
+  req.user = decoded;\n\
+  next();\n\
+};"
+}
