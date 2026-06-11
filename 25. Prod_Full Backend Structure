@@ -1,0 +1,52 @@
+{
+  "backend": {
+    "src": {
+      "app.js": "Main entry",
+      "server.js": "HTTP server",
+      "config": [
+        "database.js",
+        "env.js"
+      ],
+      "modules": {
+        "auth": [
+          "auth.controller.js",
+          "auth.service.js",
+          "auth.repository.js",
+          "auth.routes.js",
+          "auth.middleware.js"
+        ],
+        "admin": [
+          "admin.controller.js",
+          "admin.service.js",
+          "admin.routes.js"
+        ],
+        "user": [
+          "user.controller.js",
+          "user.service.js"
+        ],
+        "ai": [
+          "ai.controller.js",
+          "ai.service.js"
+        ],
+        "payment": [
+          "payment.controller.js",
+          "payment.service.js",
+          "payment.gateway.js",
+          "payment.webhook.js"
+        ],
+        "analytics": [
+          "analytics.controller.js"
+        ]
+      },
+      "middleware": [
+        "auth.middleware.js",
+        "role.middleware.js",
+        "error.middleware.js"
+      ],
+      "utils": [
+        "jwt.js",
+        "logger.js"
+      ]
+    }
+  }
+}
