@@ -1,0 +1,3 @@
+{
+  "code": "exports.consumeCredit = async (userId, tokens) => {\n const user = await db.users.findById(userId);\n if (user.ai_credits < tokens) throw new Error('Insufficient credits');\n\n await db.users.update(userId, {\n  ai_credits: user.ai_credits - tokens\n });\n};"
+}
