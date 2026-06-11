@@ -1,0 +1,6 @@
+User input prompt
+→ Frontend kirim ke API
+→ Backend → OpenAI
+→ Response disimpan DB
+→ Return ke frontend
+→ Ditampilkan di UI
