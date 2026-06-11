@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DATABASE_URL": "postgresql://user:pass@localhost:5432/db",
+    "JWT_SECRET": "supersecret",
+    "OPENAI_API_KEY": "your_key",
+    "MIDTRANS_KEY": "your_key"
+  }
+}
