@@ -1,0 +1,3 @@
+{
+  "code": "exports.handleWebhook = async (req) => {\n const { status, id } = req.body;\n await db.payments.update(id, { status });\n};"
+}
