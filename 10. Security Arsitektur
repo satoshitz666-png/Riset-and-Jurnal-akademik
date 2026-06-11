@@ -1,0 +1,6 @@
+- JWT Authentication
+- Role-based Access Control (RBAC)
+- API Rate Limiting
+- HTTPS
+- Payment webhook validation
+- Env secret management
