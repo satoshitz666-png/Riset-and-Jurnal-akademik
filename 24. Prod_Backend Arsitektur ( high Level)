@@ -1,0 +1,22 @@
+{
+  "architecture": "modular-monolith (ready for microservices split)",
+  "stack": {
+    "runtime": "Node.js (Express.js)",
+    "database": "PostgreSQL",
+    "auth": "JWT + OAuth (Google)",
+    "ai": "OpenAI API (external microservice ready)",
+    "payment": [
+      "Midtrans",
+      "Xendit",
+      "Stripe",
+      "Crypto (USDT/USDC)"
+    ]
+  },
+  "layers": [
+    "Route Layer",
+    "Controller Layer",
+    "Service Layer",
+    "Repository Layer",
+    "Database Layer"
+  ]
+}
