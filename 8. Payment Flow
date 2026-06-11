@@ -1,0 +1,8 @@
+User klik upgrade
+→ Pilih metode (QRIS / VA / Card / Crypto)
+→ Backend hit Payment Gateway
+→ Generate payment link
+→ User bayar
+→ Webhook callback
+→ Update status di DB
+→ Aktifkan subscription
