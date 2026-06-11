@@ -1,0 +1,33 @@
+frontend/
+│
+├── landing-page/
+│   ├── home
+│   ├── pricing
+│   ├── about
+│   └── CTA → login/register
+│
+├── auth/
+│   ├── login
+│   ├── register
+│   └── google oauth
+│
+├── dashboard/
+│   ├── user/
+│   │   ├── ai-writer
+│   │   ├── documents
+│   │   ├── subscription
+│   │   └── profile
+│   │
+│   ├── admin/
+│   │   ├── analytics
+│   │   ├── user-management
+│   │   ├── payment-monitor
+│   │   └── system-config
+│
+├── services/
+│   ├── api.js
+│   ├── auth.js
+│   ├── ai.js
+│   ├── payment.js
+│
+└── routes/
