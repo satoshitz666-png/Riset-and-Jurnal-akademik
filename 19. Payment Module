@@ -1,0 +1,27 @@
+{
+  "paymentController": "const axios = require('axios');\n\
+const { PrismaClient } = require('@prisma/client');\n\
+const prisma = new PrismaClient();\n\
+\n\
+exports.createPayment = async (req, res) => {\n\
+  const { userId, amount } = req.body;\n\
+\n\
+  const response = await axios.post('https://api.midtrans.com/v2/charge', {\n\
+    transaction_details: {\n\
+      order_id: 'order-' + Date.now(),\n\
+      gross_amount: amount\n\
+    },\n\
+    payment_type: 'qris'\n\
+  }, {\n\
+    headers: {\n\
+      Authorization: 'Basic ' + Buffer.from(process.env.MIDTRANS_KEY).toString('base64')\n\
+    }\n\
+  });\n\
+\n\
+  const trx = await prisma.transaction.create({\n\
+    data: { userId, amount, status: 'pending', provider: 'midtrans' }\n\
+  });\n\
+\n\
+  res.json({ payment: response.data, trx });\n\
+};"
+}
