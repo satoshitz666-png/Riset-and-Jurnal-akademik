@@ -1,0 +1,3 @@
+{
+  "code": "exports.createPayment = async (data) => {\n switch(data.method) {\n  case 'MIDTRANS': return midtransCharge(data);\n  case 'XENDIT': return xenditCharge(data);\n  case 'STRIPE': return stripeCharge(data);\n  case 'CRYPTO': return cryptoCharge(data);\n }\n};"
+}
