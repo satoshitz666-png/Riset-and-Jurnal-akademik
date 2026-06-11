@@ -1,0 +1,3 @@
+{
+  "code": "exports.handleWebhook = async (req) => {\n const { reference, status } = req.body;\n\n const payment = await db.payments.findByRef(reference);\n\n if (status === 'PAID') {\n  await db.users.incrementCredits(payment.user_id, payment.amount * 10);\n }\n\n await db.payments.update(payment.id, { status });\n};"
+}
