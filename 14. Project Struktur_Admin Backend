@@ -1,0 +1,25 @@
+{
+  "structure": {
+    "src": {
+      "config": {},
+      "modules": {
+        "auth": {},
+        "admin": {},
+        "user": {},
+        "ai": {},
+        "payment": {},
+        "analytics": {}
+      },
+      "middleware": {},
+      "routes": {},
+      "utils": {},
+      "app.js": "main express app"
+    },
+    "prisma": {
+      "schema.prisma": "database schema"
+    },
+    "server.js": "entry point",
+    ".env": "environment config",
+    "package.json": "dependencies"
+  }
+}
