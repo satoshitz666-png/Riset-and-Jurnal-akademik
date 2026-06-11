@@ -1,0 +1,25 @@
+{
+  "authController": "const bcrypt = require('bcrypt');\n\
+const jwt = require('jsonwebtoken');\n\
+const { PrismaClient } = require('@prisma/client');\n\
+const prisma = new PrismaClient();\n\
+\n\
+exports.registerAdmin = async (req, res) => {\n\
+  const { email, password } = req.body;\n\
+  const hash = await bcrypt.hash(password, 10);\n\
+  const admin = await prisma.user.create({\n\
+    data: { email, password: hash, role: 'admin' }\n\
+  });\n\
+  res.json(admin);\n\
+};\n\
+\n\
+exports.loginAdmin = async (req, res) => {\n\
+  const { email, password } = req.body;\n\
+  const user = await prisma.user.findUnique({ where: { email } });\n\
+  if (!user || user.role !== 'admin') return res.status(403).send('Forbidden');\n\
+  const valid = await bcrypt.compare(password, user.password);\n\
+  if (!valid) return res.status(401).send('Invalid');\n\
+  const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET);\n\
+  res.json({ token });\n\
+};"
+}
