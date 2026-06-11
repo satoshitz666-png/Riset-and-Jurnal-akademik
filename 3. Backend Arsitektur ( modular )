@@ -1,0 +1,24 @@
+backend/
+│
+├── modules/
+│   ├── auth/
+│   ├── user/
+│   ├── admin/
+│   ├── ai/
+│   ├── payment/
+│   ├── document/
+│
+├── middleware/
+│   ├── authMiddleware
+│   ├── roleMiddleware
+│
+├── services/
+│   ├── openai.service
+│   ├── payment.service
+│
+├── routes/
+│   ├── auth.routes
+│   ├── ai.routes
+│   ├── payment.routes
+│
+└── prisma/
