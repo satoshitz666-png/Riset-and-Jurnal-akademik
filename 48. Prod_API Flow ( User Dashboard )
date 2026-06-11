@@ -1,0 +1,12 @@
+{
+  "flow": [
+    "User register/login",
+    "User masuk dashboard",
+    "User request AI",
+    "Backend cek credit",
+    "AI generate response",
+    "Credit dikurangi",
+    "User topup via payment",
+    "Webhook update credit"
+  ]
+}
