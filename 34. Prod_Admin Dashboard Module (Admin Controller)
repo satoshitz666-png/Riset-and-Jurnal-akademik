@@ -1,0 +1,3 @@
+{
+  "code": "exports.getAllUsers = async () => {\n return db.users.findAll();\n};\n\nexports.getPayments = async () => {\n return db.payments.findAll();\n};"
+}
