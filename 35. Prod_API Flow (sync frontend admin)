@@ -1,0 +1,10 @@
+{
+  "flow": [
+    "Admin login → JWT issued",
+    "Frontend simpan token",
+    "Request ke /admin/users",
+    "Middleware cek role admin",
+    "Controller fetch data",
+    "Return ke dashboard UI"
+  ]
+}
