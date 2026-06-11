@@ -1,0 +1,5 @@
+Frontend → Vercel / Netlify
+Backend → AWS EC2 / Railway
+Database → PostgreSQL (Supabase / RDS)
+AI → OpenAI API
+Storage → AWS S3
