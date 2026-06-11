@@ -1,0 +1,31 @@
+{
+  "backend": {
+    "src": {
+      "modules": {
+        "auth": [
+          "auth.controller.js",
+          "auth.service.js",
+          "auth.routes.js"
+        ],
+        "user": [
+          "user.controller.js",
+          "user.service.js"
+        ],
+        "ai": [
+          "ai.controller.js",
+          "ai.service.js",
+          "ai.credit.service.js"
+        ],
+        "payment": [
+          "payment.controller.js",
+          "payment.service.js",
+          "payment.gateway.js",
+          "payment.webhook.js"
+        ],
+        "subscription": [
+          "subscription.service.js"
+        ]
+      }
+    }
+  }
+}
