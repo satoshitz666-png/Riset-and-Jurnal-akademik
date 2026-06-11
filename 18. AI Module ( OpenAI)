@@ -1,0 +1,17 @@
+{
+  "aiController": "const OpenAI = require('openai');\n\
+const { PrismaClient } = require('@prisma/client');\n\
+const prisma = new PrismaClient();\n\
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });\n\
+\n\
+exports.generate = async (req, res) => {\n\
+  const { prompt, userId } = req.body;\n\
+  const completion = await openai.chat.completions.create({\n\
+    model: 'gpt-5',\n\
+    messages: [{ role: 'user', content: prompt }]\n\
+  });\n\
+  const result = completion.choices[0].message.content;\n\
+  await prisma.aIRequest.create({ data: { userId, prompt, response: result } });\n\
+  res.json({ result });\n\
+};"
+}
