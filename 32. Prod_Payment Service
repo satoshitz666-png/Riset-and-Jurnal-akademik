@@ -1,0 +1,3 @@
+{
+  "code": "exports.create = async (payload) => {\n const payment = await db.payments.create(payload);\n const gateway = await gateway.createPayment(payload);\n return { payment, gateway };\n};"
+}
