@@ -1,0 +1,8 @@
+{
+  "logic": {
+    "conversion": "1 USD = 100 AI credits",
+    "deduction": "based on token usage",
+    "topup": "via payment gateway",
+    "subscription": "monthly auto credit"
+  }
+}
