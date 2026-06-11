@@ -1,0 +1,37 @@
+{
+  "tables": {
+    "users": {
+      "id": "uuid PK",
+      "email": "string UNIQUE",
+      "password": "hashed",
+      "role": "admin | user",
+      "created_at": "timestamp"
+    },
+    "sessions": {
+      "id": "uuid",
+      "user_id": "FK",
+      "token": "string"
+    },
+    "payments": {
+      "id": "uuid",
+      "user_id": "FK",
+      "amount": "numeric",
+      "method": "VA | QRIS | CARD | CRYPTO",
+      "status": "pending | paid | failed",
+      "created_at": "timestamp"
+    },
+    "subscriptions": {
+      "id": "uuid",
+      "user_id": "FK",
+      "plan": "string",
+      "status": "active | expired"
+    },
+    "ai_logs": {
+      "id": "uuid",
+      "user_id": "FK",
+      "prompt": "text",
+      "response": "text",
+      "created_at": "timestamp"
+    }
+  }
+}
