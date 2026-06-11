@@ -1,0 +1,3 @@
+{
+  "code": "exports.processPayment = async (payload) => {\n switch(payload.method) {\n  case 'MIDTRANS': return midtrans.charge(payload);\n  case 'XENDIT': return xendit.createInvoice(payload);\n  case 'STRIPE': return stripe.paymentIntents.create(payload);\n  case 'CRYPTO': return crypto.createWalletCharge(payload);\n }\n};"
+}
