@@ -1,0 +1,20 @@
+{
+  "architecture": {
+    "pattern": "Modular Monolith (Microservices Ready)",
+    "layers": [
+      "Controller",
+      "Service",
+      "Repository (Prisma)",
+      "Middleware",
+      "Routes"
+    ],
+    "modules": [
+      "auth",
+      "admin",
+      "user",
+      "ai",
+      "payment",
+      "analytics"
+    ]
+  }
+}
