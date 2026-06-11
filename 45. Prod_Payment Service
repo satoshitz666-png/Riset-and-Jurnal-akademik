@@ -1,0 +1,3 @@
+{
+  "code": "exports.createPayment = async (data) => {\n const payment = await db.payments.create(data);\n const gateway = await gateway.processPayment(data);\n return { payment, gateway };\n};"
+}
