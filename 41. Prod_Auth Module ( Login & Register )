@@ -1,0 +1,3 @@
+{
+  "auth.service.js": "const bcrypt = require('bcrypt');\nconst jwt = require('../../utils/jwt');\n\nexports.register = async (data) => {\n const hash = await bcrypt.hash(data.password, 10);\n return db.users.create({ ...data, password: hash });\n};\n\nexports.login = async ({ email, password }) => {\n const user = await db.users.findOne({ email });\n const match = await bcrypt.compare(password, user.password);\n if (!match) throw new Error('Invalid credentials');\n return jwt.sign({ id: user.id });\n};"
+}
