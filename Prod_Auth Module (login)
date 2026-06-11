@@ -1,0 +1,3 @@
+{
+  "code": "router.post('/register', authController.register);\nrouter.post('/login', authController.login);"
+}
