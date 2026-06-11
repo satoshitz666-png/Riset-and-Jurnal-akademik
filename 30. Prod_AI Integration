@@ -1,0 +1,3 @@
+{
+  "code": "const OpenAI = require('openai');\nconst client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });\n\nexports.generate = async (prompt) => {\n const res = await client.chat.completions.create({\n  model: 'gpt-4o-mini',\n  messages: [{ role: 'user', content: prompt }]\n });\n return res.choices[0].message.content;\n};"
+}
