@@ -1,0 +1,31 @@
+User
+ ├── id
+ ├── email
+ ├── password
+ ├── role (admin/user)
+ ├── created_at
+
+Document
+ ├── id
+ ├── user_id
+ ├── content
+ ├── created_at
+
+Transaction
+ ├── id
+ ├── user_id
+ ├── amount
+ ├── status
+ ├── provider
+
+AI_Request
+ ├── id
+ ├── user_id
+ ├── prompt
+ ├── response
+
+Subscription
+ ├── id
+ ├── user_id
+ ├── plan
+ ├── status
