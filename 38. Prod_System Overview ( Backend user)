@@ -1,0 +1,12 @@
+{
+  "system": "User Dashboard Backend",
+  "architecture": "modular scalable backend",
+  "features": [
+    "JWT Authentication",
+    "AI Credit System",
+    "Payment Gateway Integration",
+    "Subscription System",
+    "Usage Tracking",
+    "Webhook Payment Sync"
+  ]
+}
